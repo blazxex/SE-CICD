@@ -8,12 +8,35 @@ const dayOfTheWeek = (date = new Date()) => {
     "Friday",
     "Saturday",
   ];
-
   return days[date.getDay()];
 };
 
-try {
-  document.getElementById("day").innerText = dayOfTheWeek();
-} catch (err) {}
+const monthOfTheYear = (date = new Date()) => {
+  const month = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  return month[date.getMonth()];
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  try {
+    document.getElementById("day").innerText = dayOfTheWeek();
+    document.getElementById("month").innerText = monthOfTheYear();
+  } catch (err) {
+    console.error("Error updating day/month:", err);
+  }
+});
 
 exports.dayOfTheWeek = dayOfTheWeek;
+exports.monthOfTheYear = monthOfTheYear;

@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("const dayOfTheWeek = (date = new Date()) => {\n    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];\n\n    return days[date.getDay()];\n}\n\n\ntry {\n    document.getElementById('day').innerText = dayOfTheWeek();\n} catch(err) {}\n\n\nexports.dayOfTheWeek = dayOfTheWeek;\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("const dayOfTheWeek = (date = new Date()) => {\n  const days = [\n    \"Sunday\",\n    \"Monday\",\n    \"Tuesday\",\n    \"Wednesday\",\n    \"Thursday\",\n    \"Friday\",\n    \"Saturday\",\n  ];\n  return days[date.getDay()];\n};\n\nconst monthOfTheYear = (date = new Date()) => {\n  const month = [\n    \"January\",\n    \"February\",\n    \"March\",\n    \"April\",\n    \"May\",\n    \"June\",\n    \"July\",\n    \"August\",\n    \"September\",\n    \"October\",\n    \"November\",\n    \"December\",\n  ];\n  return month[date.getMonth()];\n};\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n  try {\n    document.getElementById(\"day\").innerText = dayOfTheWeek();\n    document.getElementById(\"month\").innerText = monthOfTheYear();\n  } catch (err) {\n    console.error(\"Error updating day/month:\", err);\n  }\n});\n\nexports.dayOfTheWeek = dayOfTheWeek;\nexports.monthOfTheYear = monthOfTheYear;\n\n\n//# sourceURL=webpack:///./src/app.js?");
 
 /***/ })
 
